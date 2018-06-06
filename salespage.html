@@ -108,18 +108,23 @@
     <div id="menu-tiles" class="row">
       <div id="main_section" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <p id="text_section">
-          Building description!!!
-          <br> HomePageTag:
-          <br> &lt;script type=&quot;text/javascript&quot; src=&quot;//static.criteo.net/js/ld/ld.js&quot; async=&quot;true&quot;&gt;&lt;/script&gt;
-          <br>&lt;script type=&quot;text/javascript&quot;&gt;
-          <br>window.criteo_q = window.criteo_q || [];
-          <br>var deviceType = /iPad/.test(navigator.userAgent) ? &quot;t&quot; : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? &quot;m&quot; : &quot;d&quot;;
-          <br>window.criteo_q.push(
-           <br>{ event: &quot;setAccount&quot;, account: PARTNER_ID}, // You should never update this line
-           <br>{ event: &quot;setEmail&quot;, email: &quot;##Email Address of user##&quot; }, // Can be an empty string 
-           <br>{ event: &quot;setSiteType&quot;, type: deviceType},
-           <br>{ event: &quot;viewHome&quot;});
-           <br>&lt;/script&gt;
+          &lt;!-- Тэг продажи Criteo OneTag --&gt;
+            <br>&lt;script type=&quot;text/javascript&quot; src=&quot;//static.criteo.net/js/ld/ld.js&quot; async=&quot;true&quot;&gt;&lt;/script&gt;
+            <br>&lt;script type=&quot;text/javascript&quot;&gt;
+            <br>window.criteo_q = window.criteo_q || [];
+            <br>var deviceType = /iPad/.test(navigator.userAgent) ? &quot;t&quot; : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? &quot;m&quot; : &quot;d&quot;;
+            <br>window.criteo_q.push(
+            <br> { event: &quot;setAccount&quot;, account: PARTNER_ID}, // Это значение остается неизменным
+            <br> { event: &quot;setEmail&quot;, email: &quot;##Email Address of user##&quot; }, // Может быть пустой строкой
+            <br> { event: &quot;setSiteType&quot;, type: deviceType},
+            <br> { event: &quot;trackTransaction&quot;, id: ##ID транзакции##, item: [
+            <br>    {id: &quot;##ID продукта №1##&quot;, price: ##Цена за единицу товара##, 
+                quantity: ##Количество товарных единиц## }
+            <br>    //добавьте новую запись для каждого продукта в корзине
+            <br>]}
+            <br>);
+            <br>&lt;/script&gt; 
+          <br>&lt;!-- Конец тэга продажи Criteo OneTag --&gt;
         </p>
     </div>  <!-- End of the main sections -->    
   </div> <!--End of the main tiles -->
