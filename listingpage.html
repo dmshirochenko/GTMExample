@@ -13,6 +13,18 @@
     <![endif]-->
 
     <title>Google tag manager example</title>
+    <!-- Criteo Category / Listing dataLayer -->
+          <script type='text/javascript'>
+                  var dataLayer = dataLayer || [];
+                  dataLayer.push({                      
+                      'event': 'crto_listingpage',
+                      crto: {             
+                          'email': 'crtotest@test.com',
+                          'products': ['ProductID_1', 'ProductID_2', 'ProductID_3']
+                      }
+                  });
+          </script>
+    <!-- END Criteo Category / Listing dataLayer -->
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

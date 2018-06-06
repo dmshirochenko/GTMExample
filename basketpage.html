@@ -13,6 +13,27 @@
     <![endif]-->
 
     <title>Google tag manager example</title>
+    <!-- Criteo Basket/Cart dataLayer -->
+        <script type='text/javascript'>
+                var dataLayer = dataLayer || [];
+                dataLayer.push({
+                    'event': 'crto_basketpage',            
+                    crto: {             
+                        'email': 'crtotest@test.com',                           
+                        'products': [{
+                            id: 'ProductID_1',
+                            price: '200.99',              
+                            quantity: '2'
+                        },
+                        {
+                            id:'ProductID_2',
+                            price: '50.00',                                       
+                            quantity: '1'
+                        }]
+                    }
+                });
+        </script>
+    <!-- END Criteo Basket/Cart dataLayer -->
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
